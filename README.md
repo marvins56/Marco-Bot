@@ -29,6 +29,8 @@ pip install -r requirements.txt
 
 To run Marco, execute the following command:navigate to the main.py and run the command
 
+cd  Marco-Bot/blob/main/Marco-Bot/Marco/
+
 streamlit run main.py
 
 **environment Variables**
