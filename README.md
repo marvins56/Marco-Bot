@@ -8,12 +8,14 @@ Marco - Your Event Companion
 Marco is a comprehensive event management platform designed primarily for travelers. It serves as a one-stop database for discovering, booking, and even hosting events. Whether you're a tourist exploring a new city or a local looking to uncover hidden gems, Marco has you covered.
 
 **Features**
+
 Discover diverse events based on location and preferences.
 Reservation and booking services for all listed events.
 Capability to host and manage your events.
 Promotional services for event organizers to increase visibility.
 
 **Installation**
+
 Clone the repository:
 
 [git clone https://github.com/your-github-username/marco.git](https://github.com/marvins56/Marco-Bot.git)
@@ -24,6 +26,7 @@ Clone the repository:
 pip install -r requirements.txt
 
 **Usage**
+
 To run Marco, execute the following command:navigate to the main.py and run the command
 
 streamlit run main.py
