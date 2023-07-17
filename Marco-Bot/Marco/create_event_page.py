@@ -6,6 +6,9 @@ import mysql.connector
 
 from Utils import UPLOAD_DIR, save_image
 
+from chatbot_page import chatbot_page
+
+from Recomendations import Recomendations
 
 def create_event_page():
     with st.form("create_event_form"):
@@ -54,5 +57,38 @@ def create_event_page():
             except Exception as e:
                 st.error(f"An error occurred: {str(e)}")
 
-if __name__ == "__main__":
-    create_event_page()
+
+
+def intro():
+    import streamlit as st
+
+    st.write("# Welcome to Macro! 👋")
+    st.sidebar.success("Select a Action")
+
+    st.markdown(
+        """
+        Marco is a comprehensive event management platform designed primarily for travelers. It serves as a one-stop database for discovering, booking, and even hosting events. Whether you're a tourist exploring a new city or a local looking to uncover hidden gems, Marco has you covered. Our platform offers a list of diverse events and provides reservation and booking services. Additionally, event organizers can take advantage of Marco's 
+        promotional services to boost their event's visibility, regardless of its location.
+
+        Streamlit is an open-source app framework built specifically for
+        Machine Learning and Data Science projects.
+
+        **👈 Select a demo from the dropdown on the left** to see some examples
+        of what Marco can do!
+
+       
+    """
+    )
+
+
+
+
+page_names_to_funcs = {
+    "—": create_event_page,
+    "ChatBot": chatbot_page,
+    "Recomendation": Recomendations,
+    "introduction": intro
+}
+
+demo_name = st.sidebar.selectbox("Choose a Action", page_names_to_funcs.keys())
+page_names_to_funcs[demo_name]()

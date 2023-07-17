@@ -5,12 +5,13 @@ import os
 from dotenv import find_dotenv, load_dotenv
 from langchain import OpenAI
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-
+from langchain.callbacks import StreamlitCallbackHandler
+import streamlit as st
 
 dotenv_path = find_dotenv()
 load_dotenv(dotenv_path)
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-llm = OpenAI(temperature=0)
+llm = OpenAI(temperature=0,streaming=True)
 
 
 def answer_question_from_document(query: str) -> str:
@@ -28,15 +29,15 @@ def answer_question_from_document(query: str) -> str:
         chunk_overlap=0
     )
     document_chunks = text_splitter.split_documents(document)
+    st_callback = StreamlitCallbackHandler(st.container())
+
 
     # Perform question answering
-    result = chain({"input_documents": document_chunks[:5], "question": query}, return_only_outputs=True)
+    result = chain({"input_documents": document_chunks[:5], "question": query}, return_only_outputs=True,callbacks=[st_callback])
 
     return result['output_text']
 
-# doc = "C:/Users/jukas/Desktop/Mackro/Marco-Bot/Marco/results/result_20230716_125005.txt"
-#
-# answer_question_from_document(doc, "what categories are present ")
+
 
 
 

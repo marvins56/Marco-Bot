@@ -77,6 +77,8 @@ from langchain.chains.question_answering import load_qa_chain
 from langchain.chains import RetrievalQA
 import os
 from dotenv import find_dotenv, load_dotenv
+from langchain.callbacks import StreamlitCallbackHandler
+import streamlit as st
 
 # Load environment variables
 dotenv_path = find_dotenv()
@@ -107,9 +109,14 @@ def RecommendationChain(query):
     )
 
     vectordb.persist()
+
     model_name = "gpt-3.5-turbo"
-    llm = ChatOpenAI(model_name=model_name)
+
+    llm = ChatOpenAI(model_name=model_name,streaming=True)
+    
+    st_callback = StreamlitCallbackHandler(st.container())
 
     retrieval_chain = RetrievalQA.from_chain_type(llm, chain_type="stuff", retriever=vectordb.as_retriever())
-    result = retrieval_chain.run(query)
+    result = retrieval_chain.run(query, callbacks=[st_callback])
+
     return result

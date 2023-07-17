@@ -3,3 +3,4 @@ makroldb/
 .idea/
 _pycache_/
 Testfiles/
+chroma_db/
