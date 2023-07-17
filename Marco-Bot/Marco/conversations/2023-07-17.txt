@@ -1,0 +1,285 @@
+User
+01:49:56
+give me a list of events that are happening next week 
+
+Bot
+01:49:56
+
+No events are listed in the SQLResult, so there are no events happening next week that are listed in the items table, such as Salsa en la Calle del Sabor, Tour de Comida Callejera Caleña y Valluna (Organizado por Cali Cultural), Noche de Brisas (Salsa social), Cali Collaborative Thursday MeetUp (South), Gringo Tuesdays Cali, Un Borondo por Cali (Organizado por El Traveler), and Cali Collaborative Thursday MeetUp (West-center).
+
+User
+01:49:56
+give me a list of events that are happening next week 
+
+User
+02:12:01
+which events are happening next week
+
+Bot
+02:12:01
+
+No events are happening next week according to the SQL query and the data provided in the beta_users, filters, items, lists, sponsors, and sublists tables, including Salsa en la Calle del Sabor, Tour de Comida Callejera Caleña y Valluna (Organizado por Cali Cultural), Un Borondo por Cali (Organizado por El Traveler), TechLatam Junio, TechLatam Julio, TechLatam Agosto, Noche de Brisas (Salsa social), Cali Collaborative Thursday MeetUp (South), Gringo Tuesdays Cali, Salsa, Daily salsa tour, Walking tour, Cerro 3 Cruces, Party bus, Heels Workshop, Hip-Hop Dance Class, SaBaKi Nigth, SABAKI NIGHT AFROLATINO, KIZOMBA (SalsaPura)(Clases), SALSA CALEÑA (Bas/Inter), Bachata Sensual, Spanish with Xiomara, INGLESCONDAN (clases de inglés privadas), INGLESCONDAN (Clases de Ingles Privadas).
+
+User
+01:49:56
+give me a list of events that are happening next week 
+
+User
+01:49:56
+give me a list of events that are happening next week 
+
+User
+02:12:01
+which events are happening next week
+
+User
+02:14:05
+get me the link for this event "Organizado por Cali Cultural"
+
+Bot
+02:14:05
+
+
+The SQL query SELECT `bookingLink` FROM items WHERE name = 'Organizado por Cali Cultural'; did not return any results. Additionally, the beta_users table does not contain any booking links for the event either, as the upvotes, downvotes, addedItems, rsvp, Last Modified, towns, and sponsors columns do not contain any booking links for the event "Salsa en la Calle del Sabor,Tour de Comida Callejera Caleña y Valluna (Organizado por Cali Cultural)" or "Un Borondo por Cali (Organizado por El Traveler)" or "Cali collaborative Thursdays MeetUp (West-center)". Therefore, there is no link for the event "Organizado por Cali Cultural" in the items table.
+
+User
+01:49:56
+give me a list of events that are happening next week 
+
+User
+01:49:56
+give me a list of events that are happening next week 
+
+User
+02:12:01
+which events are happening next week
+
+User
+01:49:56
+give me a list of events that are happening next week 
+
+User
+01:49:56
+give me a list of events that are happening next week 
+
+User
+02:12:01
+which events are happening next week
+
+User
+02:14:05
+get me the link for this event "Organizado por Cali Cultural"
+
+User
+02:17:21
+what event is happening on 2023/07/19
+
+Bot
+02:17:21
+
+No event is happening on 2023/07/19 according to the given information. The table beta_users does not contain any events happening on 2023/07/19, including Salsa en la Calle del Sabor, Tour de Comida Callejera Caleña y Valluna (Organizado por Cali Cultural), Un Borondo por Cali (Organizado por El Traveler), and Cali collaborative Thursdays MeetUp (West-center).
+
+User
+01:49:56
+give me a list of events that are happening next week 
+
+User
+01:49:56
+give me a list of events that are happening next week 
+
+User
+02:12:01
+which events are happening next week
+
+User
+01:49:56
+give me a list of events that are happening next week 
+
+User
+01:49:56
+give me a list of events that are happening next week 
+
+User
+02:12:01
+which events are happening next week
+
+User
+02:14:05
+get me the link for this event "Organizado por Cali Cultural"
+
+User
+01:49:56
+give me a list of events that are happening next week 
+
+User
+01:49:56
+give me a list of events that are happening next week 
+
+User
+02:12:01
+which events are happening next week
+
+User
+01:49:56
+give me a list of events that are happening next week 
+
+User
+01:49:56
+give me a list of events that are happening next week 
+
+User
+02:12:01
+which events are happening next week
+
+User
+02:14:05
+get me the link for this event "Organizado por Cali Cultural"
+
+User
+02:17:21
+what event is happening on 2023/07/19
+
+User
+02:50:49
+what event is there tumoro
+
+Bot
+02:50:49
+
+
+No events are scheduled for tomorrow based on the SQL query provided and the new context. The beta_users table does not contain any events for tomorrow, as indicated by the empty SQLResult and the lack of events listed in the towns column. The new context does not contain any events for tomorrow either, as the events listed are for dates in June, July, and August of 2023, and the filters table does not contain any events for tomorrow either.
+
+User
+01:49:56
+give me a list of events that are happening next week 
+
+User
+01:49:56
+give me a list of events that are happening next week 
+
+User
+02:12:01
+which events are happening next week
+
+User
+01:49:56
+give me a list of events that are happening next week 
+
+User
+01:49:56
+give me a list of events that are happening next week 
+
+User
+02:12:01
+which events are happening next week
+
+User
+02:14:05
+get me the link for this event "Organizado por Cali Cultural"
+
+User
+01:49:56
+give me a list of events that are happening next week 
+
+User
+01:49:56
+give me a list of events that are happening next week 
+
+User
+02:12:01
+which events are happening next week
+
+User
+01:49:56
+give me a list of events that are happening next week 
+
+User
+01:49:56
+give me a list of events that are happening next week 
+
+User
+02:12:01
+which events are happening next week
+
+User
+02:14:05
+get me the link for this event "Organizado por Cali Cultural"
+
+User
+02:17:21
+what event is happening on 2023/07/19
+
+User
+01:49:56
+give me a list of events that are happening next week 
+
+User
+01:49:56
+give me a list of events that are happening next week 
+
+User
+02:12:01
+which events are happening next week
+
+User
+01:49:56
+give me a list of events that are happening next week 
+
+User
+01:49:56
+give me a list of events that are happening next week 
+
+User
+02:12:01
+which events are happening next week
+
+User
+02:14:05
+get me the link for this event "Organizado por Cali Cultural"
+
+User
+01:49:56
+give me a list of events that are happening next week 
+
+User
+01:49:56
+give me a list of events that are happening next week 
+
+User
+02:12:01
+which events are happening next week
+
+User
+01:49:56
+give me a list of events that are happening next week 
+
+User
+01:49:56
+give me a list of events that are happening next week 
+
+User
+02:12:01
+which events are happening next week
+
+User
+02:14:05
+get me the link for this event "Organizado por Cali Cultural"
+
+User
+02:17:21
+what event is happening on 2023/07/19
+
+User
+02:50:49
+what event is there tumoro
+
+User
+02:52:20
+what event is there in  August 
+
+Bot
+02:52:20
+
+
+Given the new context, it is still not possible to answer the question as the SQL query returns an empty result. However, the new context provides additional information about events that are taking place in August, such as "Salsa en la Calle del Sabor,Tour de Comida Callejera Caleña y Valluna (Organizado por Cali Cultural)", "Un Borondo por Cali (Organizado por El Traveler)", "Cali collaborative Thursdays MeetUp (West-center)", and "Cali collaborative Thursdays MeetUp (North)".
+

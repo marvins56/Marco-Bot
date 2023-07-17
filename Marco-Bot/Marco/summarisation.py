@@ -20,7 +20,7 @@ def answer_question_from_document(query: str) -> str:
     document = loader.load()
 
     # Initialize chain
-    chain = load_qa_chain(llm, chain_type="map_rerank", verbose=True, return_intermediate_steps=True)
+    chain = load_qa_chain(llm, chain_type="refine", verbose=True, return_intermediate_steps=True)
 
     # Split document into chunks
     text_splitter = RecursiveCharacterTextSplitter(

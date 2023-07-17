@@ -78,8 +78,8 @@ from langchain.chains import RetrievalQA
 import os
 from dotenv import find_dotenv, load_dotenv
 
- # Load environment variables
-dotenv_path= find_dotenv()
+# Load environment variables
+dotenv_path = find_dotenv()
 load_dotenv(dotenv_path)
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
@@ -88,30 +88,28 @@ def load_docs(directory):
     loader = DirectoryLoader(directory)
     documents = loader.load()
     return documents
+
 def split_docs(documents,chunk_size=1000,chunk_overlap=20):
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
     docs = text_splitter.split_documents(documents)
     return docs
+def RecommendationChain(query):
 
+    documents = load_docs(directory)
+    docs = split_docs(documents)
+    embeddings = SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2")
+    db = Chroma.from_documents(docs, embeddings)
 
-documents = load_docs(directory)
-# len(documents)
-docs = split_docs(documents)
-# print(len(docs))
-embeddings = SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2")
-db = Chroma.from_documents(docs, embeddings)
+    persist_directory = "chroma_db"
 
-persist_directory = "chroma_db"
+    vectordb = Chroma.from_documents(
+        documents=docs, embedding=embeddings, persist_directory=persist_directory
+    )
 
-vectordb = Chroma.from_documents(
-    documents=docs, embedding=embeddings, persist_directory=persist_directory
-)
+    vectordb.persist()
+    model_name = "gpt-3.5-turbo"
+    llm = ChatOpenAI(model_name=model_name)
 
-vectordb.persist()
-
-model_name = "gpt-3.5-turbo"
-llm = ChatOpenAI(model_name=model_name)
-query = "What are the emotional benefits of owning a pet?"
-
-retrieval_chain = RetrievalQA.from_chain_type(llm, chain_type="stuff", retriever=vectordb.as_retriever())
-retrieval_chain.run(query)
+    retrieval_chain = RetrievalQA.from_chain_type(llm, chain_type="stuff", retriever=vectordb.as_retriever())
+    result = retrieval_chain.run(query)
+    return result
