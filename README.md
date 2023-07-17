@@ -18,7 +18,7 @@ Promotional services for event organizers to increase visibility.
 
 Clone the repository:
 
-[git clone https://github.com/your-github-username/marco.git](https://github.com/marvins56/Marco-Bot.git)
+https://github.com/marvins56/Marco-Bot.git
 
 
 **Install the dependencies:**
@@ -28,6 +28,8 @@ pip install -r requirements.txt
 **Usage**
 
 To run Marco, execute the following command:navigate to the main.py and run the command
+
+cd  Marco-Bot/blob/main/Marco-Bot/Marco/
 
 streamlit run main.py
 
