@@ -18,7 +18,7 @@ Promotional services for event organizers to increase visibility.
 
 Clone the repository:
 
-[git clone https://github.com/your-github-username/marco.git](https://github.com/marvins56/Marco-Bot.git)
+https://github.com/marvins56/Marco-Bot.git
 
 
 **Install the dependencies:**
