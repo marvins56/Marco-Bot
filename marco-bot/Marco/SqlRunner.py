@@ -70,7 +70,7 @@ def get_sql_result(question: str):
             input_variables=["input", "table_info", "dialect"], template=_DEFAULT_TEMPLATE
         )
 
-        llm = OpenAI(temperature=0,model="gpt-3.5-turbo")
+        llm = OpenAI(temperature=0)
 
         # The database initialization is not provided in your original code
         # Replace the `...` with appropriate arguments to instantiate the SQLDatabase

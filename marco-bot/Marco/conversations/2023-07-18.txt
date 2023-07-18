@@ -1,0 +1,10 @@
+User
+12:54:20
+what events are happening next week
+
+Bot
+12:54:20
+
+
+The new context information provided does not contain enough information to answer the question. It contains a SQL query and the result of the query, which shows the data from a table containing email, first name, last name, thumbnail, thumbnail image, notes, upvotes, downvotes, added items, RSVP, last modified, towns, and sponsors. It also includes additional information about an event called "Calle del Sabor, Tour de Comida Callejera Caleña y Valluna" organized by Cali Cultural on 7/10/2023 at 5:59pm, as well as information about a Cali Collaborative Thursdays MeetUp. However, it does not provide any information about what the query is asking or what the result means.
+
